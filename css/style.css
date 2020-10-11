@@ -1,0 +1,475 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #fff;
+  color: #666666;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #03C4EB;
+  transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+  color: #03c5ec;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1 {
+  font-family: 'Work Sans', sans-serif;
+  margin: 0 0 25px 0;
+  font-size: 75px;
+  padding: 0;
+}
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 27px;
+  color: #03C4EB;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 430;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+/*--------------------------------------------------------------
+HOME
+--------------------------------------------------------------*/
+#hero {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/back.jpg);
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: ;
+  }
+}
+#hero .hero-container {
+  background: rgba(0, 0, 0, 0.3);
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#hero h1 {
+  margin: 30px 0 10px 0;
+  font-size: 68px;
+  font-weight: 700;
+  color: white;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#hero h2 {
+  color: white;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 30px;
+  }
+  #hero h2 .rotating {
+    display: block;
+  }
+}
+
+#hero .rotating > .animated {
+  display: inline-block;
+}
+
+#hero .actions a {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 680;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 49px;
+  transition: 0.5s;
+  margin: 12px;
+}
+
+#hero .btn-get-started {
+  background:white;
+  font-family: 'Courier New', Courier, monospace ;
+  color:#61ACD4;
+  width: 150px;
+  font-size: 24px;
+}
+
+#hero .btn-get-started:hover {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 49px;
+}
+
+#hero .btn-services {
+  background: white;
+  font-family: 'Courier New', Courier, monospace;
+  color: #61ACD4;
+  width: 150px;
+  font-size: 24px;
+}
+
+#hero .btn-services:hover {
+  background: none;
+  border: 2px solid white;
+  color: #fff;
+  border-radius: 49px;
+}
+/*--------------------------------------------------------------
+MENU
+--------------------------------------------------------------*/
+.menu {
+  background-color: white;
+  height: 95px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid #fff;
+}
+
+.logito {
+  padding: 0 40px;
+  height: 95px;
+  width: 340px;
+  margin-left: 25px;
+}
+.menu_items {
+  display: flex;
+  list-style: none;
+  margin-right: 50px;
+}
+ .menu_items li {
+   margin: 0 25px;
+   width: 130px;
+   border-radius: 49px;
+   background-color: #1B5BAA;
+ }
+.menu_items li a {
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  color: white;
+  font-family: 'Segoe UI', regular;
+  font-weight: bolder;
+}
+
+.menu_items li:hover, li :active {
+  background-color: #5b9beb;
+  transition: .4s;
+  border-radius: 49px;
+
+}
+.btn_menu {
+  margin-right: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+ul.show {
+  top: 65px;
+}
+@media screen and (max-width: 952px){
+  .logito{
+    padding-left: 35px;
+  }
+  .menu_items li a{
+    font-size: 16px;
+
+  }
+}
+
+@media screen and (max-width: 858px){
+  .menu{
+height: 65px;
+  }
+  .btn_menu{
+    display: inline-flex;
+  }
+  .menu_items {
+    position: fixed;
+    width: 100vw;
+    height: calc(100%-65px);
+    background:#414141;
+    top: -100vh;
+    text-align: center;
+    transition: all .4s;
+    flex-direction: column;
+  }
+  .menu_items li {
+    margin: 30px 0 0 0;
+    line-height: 30px;
+  }
+  .menu_items li:hover {
+    background: none;
+  }
+  .menu_items li a {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+  }
+  .menu_items li a:hover {
+    color: red;
+  }
+  .logito {
+    padding-left: 35px;
+  }
+}
+
+@media screen and (max-width: 858px) and (orientation: landscape){
+  .menu_items li {
+    margin: 5px 0 0 0;
+  }
+  .menu_items {
+    overflow: scroll;
+    height: calc(100% - 65px);
+  }
+}
+
+/*--------------------------------------------------------------
+SECTIONS
+--------------------------------------------------------------*/
+/* COMMON
+--------------------------------*/
+.section-title {
+  font-size: 35px;
+  color:  #000000;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-text-stroke: 1px black;
+  font-weight: 700;
+}
+
+.section-description {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title-divider {
+  width: 50px;
+  height: 3px;
+  background: #1B5BAA;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+#input-search{
+    width: 600px;
+    height: 40px;
+    font-size: 20px;
+    text-indent: 10px;
+    border-color: gray;
+    text-align: left;
+    font-family: "Raleway", sans-serif;
+}
+/* FORMS
+--------------------------------*/
+
+
+/*--------------------------------------------------------------
+FOOTER
+--------------------------------------------------------------*/
+#footer {
+  background: #1B5BAA;
+  padding: 30px 0;
+  color: #fff;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.bana {
+  background-color: #DBDBDB;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  border-bottom: solid #fff;
+  margin-bottom: 40px;
+}
+
+.elementos {
+  display: flex;
+  list-style: none;
+  margin-left: 100px;
+}
+ .elementos li {
+   width: 300px;
+   margin-right: 320px;
+ }
+.elementos li a {
+  text-decoration: none;
+  font-size: 19px;
+  text-align: justify;
+  color: #1B5BAA;
+  font-family: 'Segoe UI', regular;
+}
+
+#contenedor {
+  padding: 40px;
+  overflow: hidden;
+  padding-top: 1px;
+}
+
+#izquierda {
+  height: 370px;
+  width: 600px;
+  margin: 40px;
+  float: right;
+  border-color: gray;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#izquierda h3{
+  text-align: center;
+  color: #1B5BAA;
+  margin-top: 20px;
+}
+
+#derecha h3{
+  text-align: center;
+  color: #1B5BAA;
+  margin-top: 20px;
+}
+
+#derecha {
+  border-width: 1px;
+  border-style: solid;
+  height: 370px;
+  width: 600px;
+  margin: 40px;
+  float: left;
+  border-color: gray;
+}
+
+#abajo {
+  height: 430px;
+  width: 1365px;
+  overflow: hidden;
+  background: rgba(179,220,237,1);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1 );
+  margin-left: 40px;
+}
+
+#abajo h3{
+  color: black;
+  margin-top: 150px;
+  margin-bottom: 30px;
+  margin-left: 300px;
+  float: left;
+  text-align: justify;
+}
+
+#abajo .findel {
+  float: left;
+  margin-left: 0px;
+  height: 430PX;
+  width: 390px;
+}
+
+#abajo .boton {
+float: left;
+margin-left: 660px;
+border: 1px solid #2e518b; 
+padding: 10px; 
+background-color: white;
+color: #1B5BAA; 
+text-decoration: none;
+border-radius: 20px; 
+font-weight: bold;
+text-align: center;
+width: 200px;
+}
+
+#abajo .boton li:hover {
+  background-color: red;
+  transition: .4s;
+  border-radius: 49px;
+
+}
+
+#arriba {
+  height: 430px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 35px;
+  background-image: linear-gradient(to right bottom, #3780eb, #4f85e9, #618ae7, #6f8fe5, #7c94e3);
+}
+
+#arriba h3{
+  color: black;
+  margin-top: 120px;
+  margin-bottom: 20px;
+  margin-right: 400px;
+  float: right;
+  text-align: justify;
+  font-weight: 30px;
+}
+
+#arriba .fondel {
+  float: right;
+  margin-right: 0px;
+  height: 430PX;
+  width: 530px;
+}
+
+#arriba .boton {
+float: left;
+text-align: center;
+margin-left: 90px;
+border: 1px solid #2e518b; 
+padding: 13px; 
+margin-top: 20px;
+font-weight: bold;
+width: 200px;
+background-color: white;
+color: #1B5BAA; 
+border-radius: 49px; 
+}
